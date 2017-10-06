@@ -11,14 +11,13 @@
 results ISBN::isValidISBN(std::string num) {
 	results result(num);
 	ISBNbase *validator;
-	//		int checkMissing[2] = {9,12};
-//	std::cout << num << " len: "<< result.value.length() << std::endl;
 
 	while (true) {
 		if(result.value.length() == 10)
 			validator = new ISBN10;
 		else if(result.value.length() == 13)
 			validator = new ISBN13;
+		else validator = nullptr;
 
 		if(result.value.length() == 9 || result.value.length() == 12){
 			result = checkAddedDigit(num);
