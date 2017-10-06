@@ -13,7 +13,7 @@
 #include "Factory.hpp"
 
 int main() {
-	std::string testCases[7] = {"807229654", "978-032-6406151","807229654", "80 722 965 4X", "978032640615", "9780-32 6406151", "33"};
+	std::string testCases[7] = {"807229644", "978-032-6406151","807229654", "80 722 965 4X", "978032640615", "9780-32 6406151", "33"};
 
 	std::cout << "Test case\tResult\tError Message\n";
 	for(int i = 0; i < 7; i++) {

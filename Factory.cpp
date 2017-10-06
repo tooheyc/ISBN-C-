@@ -15,9 +15,9 @@ results ISBN::isValidISBN(std::string num) {
 //	std::cout << num << " len: "<< result.value.length() << std::endl;
 
 	while (true) {
-		if(result.value.length() == 10 || result.value.length() == 9)
+		if(result.value.length() == 10)
 			validator = new ISBN10;
-		else if(result.value.length() == 13 || result.value.length() == 12)
+		else if(result.value.length() == 13)
 			validator = new ISBN13;
 
 		if(result.value.length() == 9 || result.value.length() == 12){
