@@ -18,19 +18,22 @@ struct results {
 	std::string value;
 	std::string err;
 
-	results(std::string val) : valid(false), err("The number must have 10 or 13 digits.") {
+	results(std::string val) : valid(false), err("Please verify number.") {
 		size_t pos, i = 0, chars = 3;
 		char ch[3] = {"- "};
 		for(i = 0; i < chars; i++) {
 			while((pos = val.find(ch[i])) < val.length()) val = val.substr(0,pos)+ val.substr(pos+1);
 		}
 		value = val;
-		if(value.length() != 10 && value.length() != 13) err = "Please double check the number.";
+		if(value.length() != 10 && value.length() != 13) err = "The number must have 10 or 13 digits.";
 	}
 
 	void show() {
-		std::string val = valid ? " is Valid ":" is Not valid ";
-		std::cout << value << val << "\t" << err << std::endl;
+//		std::string val = valid ? " is valid.":" is NOT valid.";
+//		std::cout << "Trimmed: " << value << val << std::endl;
+		std::cout << "Message: ";
+		if(!valid) std::cout<< err << std::endl;
+		else std::cout << "Valid ISBN." << std::endl;
 		std::cout << std::endl;
 	}
 	

@@ -51,7 +51,7 @@ results ISBN::checkAddedDigit(std::string num) {
 
 	// If it now shows valid, show how we made if valid
 	if(result.valid) {
-		result.err ="The number may be missing a digit("+result.value.substr(result.value.length()-1,1)+"): "+result.value;
+		result.err ="Please verify number. Did you mean: "+result.value+"?";
 		// Since we needed to add a digit to make it valid, it's not really valid:
 		result.valid = false;
 	}

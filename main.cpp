@@ -13,12 +13,12 @@
 #include "Factory.hpp"
 
 int main() {
-	std::string testCases[7] = {"807229644", "978-032-6406151","807229654", "80 722 965 4X", "978032640615", "9780-32 6406151", "33"};
+	std::string testCases[8] = {"807229644", "978-032-6406151","807229654", "80 722 965 4X", "978032640615", "9780-32 6406151", "33", "0072296552"};
 
-	std::cout << "Test case\tResult\tError Message\n";
-	for(int i = 0; i < 7; i++) {
+	std::cout << "\n\n-ISBN VALIDATION EXAMPLES-\n\n\n";
+	for(int i = 0; i < 8; i++) {
 		results test = ISBN::isValidISBN(testCases[i]);
-		std::cout <<  testCases[i] << "\t";
+		std::cout << "Test case: " << testCases[i] << "\n";
 		test.show();
 	}
 	return 0;
