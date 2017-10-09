@@ -29,8 +29,6 @@ struct results {
 	}
 
 	void show() {
-//		std::string val = valid ? " is valid.":" is NOT valid.";
-//		std::cout << "Trimmed: " << value << val << std::endl;
 		std::cout << "Message: ";
 		if(!valid) std::cout<< err << std::endl;
 		else std::cout << "Valid ISBN." << std::endl;
